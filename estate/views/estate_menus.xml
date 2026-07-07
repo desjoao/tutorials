@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<odoo>
+	<menuitem id="test_estate_root" name="Test Estate">
+		<menuitem id="test_first_level_estate" name="Actions">
+			<menuitem id="estate_property_menu_action" name="Real Estate Index" action="estate_property_action"/>
+		</menuitem>
+	</menuitem>
+</odoo>
