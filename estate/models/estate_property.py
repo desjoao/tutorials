@@ -33,3 +33,7 @@ class EstateProperty(models.Model):
             help="Possible states for an indexed property.",
             required=True,
             default='new')
+    property_type_id = fields.Many2one("estate.property.type", string="Type")
+    salesman_id = fields.Many2one("res.users", string="Salesman", default=lambda self: self.env.uid)
+    buyers_id = fields.Many2one("res.partner", string="Buyer", copy=False)
+

@@ -4,5 +4,9 @@
 		<menuitem id="test_first_level_estate" name="Actions">
 			<menuitem id="estate_property_menu_action" name="Real Estate Index" action="estate_property_action"/>
 		</menuitem>
+		<menuitem id="estate_property_settings" name="Settings">
+			<menuitem id="estate_property_types_menu" name="Property Types" action="estate_property_types_action"/>
+		</menuitem>
 	</menuitem>
+
 </odoo>
