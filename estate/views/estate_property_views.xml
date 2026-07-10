@@ -12,6 +12,7 @@
 		<field name="arch" type="xml">
 			<list string="Real Estate List">
 				<field name="name" string="Title"/>
+				<field name="property_tag_ids" widget="many2many_tags"/>
 				<field name="property_type_id" string="Property Type"/>
 				<field name="postcode"/>
 				<field name="bedrooms"/>
@@ -33,8 +34,10 @@
 						<h1>
 							<field name="name"/>
 						</h1>
+						<field name="property_tag_ids" widget="many2many_tags"/>
 					</div>
 					<group>
+						<separator/>
 						<group>
 							<field name="property_type_id" string="Property Type"/>
 							<field name="postcode"/>
@@ -57,6 +60,12 @@
 								<field name="garden_area" string="Garden Area (sqm)"/>
 								<field name="garden_orientation" string="Garden Orientation"/>
 							</group>
+						</page>
+
+						<page string="Offers">
+							
+							<field name="property_offer_ids" string="Offers"/>
+							
 						</page>
 
 						<page string="Other info">
