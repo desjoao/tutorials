@@ -1,4 +1,5 @@
 from odoo import api, fields, models
+from odoo.exceptions import UserError
 from datetime import timedelta
 
 
@@ -25,3 +26,13 @@ class EstatePropertyOffer(models.Model):
         for record in self:
             if record.create_date and record.date_deadline:
                 record.validity = (record.date_deadline - record.create_date.date()).days
+
+    def accept_offer(self):
+        for record in self:
+            record.status = 'accepted'
+        return True
+
+    def refuse_offer(self):
+        for record in self:
+            record.status = 'refused'
+        return True
